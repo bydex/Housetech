@@ -51,11 +51,11 @@ body {
         font-size: fontSize(37, 24);
     }
     font-size: rem($h1);
-    line-height: $h1-height;
+    line-height: $height-alpha;
 }
 .h2-heading {
     font-size: rem($h2);
-    line-height: $h2-height;
+    line-height: $height-beta;
 }
 
 .text {

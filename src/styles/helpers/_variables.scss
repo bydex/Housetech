@@ -30,31 +30,26 @@ $gamma-lightest: rgba($gamma, $opacity0_2);
 
 
 
-$font-muller:       'Muller';
-$font-family-base:  $font-muller, sans-serif;
+$font-alpha:       'Muller';
+$font-family-base:  $font-alpha, sans-serif;
 $body-bg:           $gamma;
 $beta-color:     $beta;
 
-$h1: 48;
-$h2: 40;
+$h1: 50;
+$h2: 42;
 
-$h1-height: 112%;
-$h2-height: 117%;
-$h3-height: 120%;
-$h4-height: 125%;
 
-$text-largest:  800;
-$text-bigger:   300;
-$text-big:      24;
+$height-alpha: 160%;
+$height-beta: 150%;
+$height-gamma: 150%;
+
+$text-largest:  58;
+$text-bigger:   38;
+$text-big:      20;
 $text-large:    18;
 $text-normal:   16;
 $text-small:    14;
 $text-smallest: 12;
-
-$height-largest:  200%;
-$height-bigger:   150%;
-$height-small:    133%;
-$height-smallest: 120%;
 
 $border-radius-small:   2px;
 $border-radius-biggest: 50px;
