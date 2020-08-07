@@ -34,16 +34,16 @@
         transform: translateY(-60%);
         max-height: 16px;
         max-width: 16px;
-        fill: $primary;
+        fill: $alpha;
     }
 }
 .top-line_theme_white {
     .top-line__phone {
-        color: $white;
+        color: $gamma;
     }
 }
 .top-line_theme_dark {
     .top-line__phone {
-        color: $dark;
+        color: $beta;
     }
 }

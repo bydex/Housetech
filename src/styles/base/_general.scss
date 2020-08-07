@@ -15,7 +15,7 @@ html {
 body {
     font-family: $font-family-base;
     background-color: $body-bg;
-    color: $primary-color;
+    color: $beta-color;
     min-width: 320px;
     overflow-x: hidden;
     padding: 0;
@@ -35,12 +35,12 @@ body {
     width: 24px;
     height: 24px;
     transition: color $duration linear;
-    fill: $white;
+    fill: $gamma;
     &_theme {
         &_white {
             use {
                 transition: fill $duration linear;
-                fill: $dark;
+                fill: $beta;
             }
         }
     }
@@ -82,86 +82,5 @@ body {
     }
     &_large {
         font-size: rem($text-largest);
-    }
-}
-
-
-.section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: {
-        position: top center;
-        size: cover;
-        repeat: no-repeat;
-    }
-
-    &__content {
-        width: 100%;
-    }
-    &__title {
-        @include margin(bottom, level_15);
-    }
-    &__subtitle {
-        @include margin(bottom, level_20);
-    }
-    &_overlay {
-       box-shadow: inset 0 0 0 100vw rgba(0,0,0, .65);
-    }
-    &__wrapper {
-        @include col();
-        @include size(7);
-        @include size-xxl(8);
-        @include size-md(9);
-        @include size-sm(10);
-        @include size-xs(12);
-    }
-    &__title {
-        @include margin(bottom, level_15);
-        font-weight: 800;
-        line-height: $h4-height;
-    }
-    &__paragraph {
-        @include margin(bottom, level_20);
-        line-height: $h4-height;
-    }
-    &-card {
-        background: {
-            image: url(../img/section-bg/section-card.jpg);
-            position: center;
-            size: cover;
-        }
-    }
-    &-corporate {
-        background: {
-            image: url(../img/section-bg/section-corporate.jpg);
-            position: center;
-            size: cover;
-        }
-        box-shadow: inset 0 0 0 100vw rgba(0,0,0, .9);
-    }
-    &-shop {
-        background: {
-            image: url(../img/section-bg/section-shop.jpg);
-            position: center;
-            size: cover;
-        }
-    }
-    &-landing {
-        background: {
-            image: url(../img/section-bg/section-landing.jpg);
-            position: center;
-            size: cover;
-        }
-        box-shadow: inset 0 0 0 100vw rgba(0,0,0, .85);
-    }
-    &-start {
-        background: {
-            image: url(../img/section-bg/section-start.jpg);
-            position: center;
-            size: cover;
-        }
     }
 }

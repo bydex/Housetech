@@ -12,7 +12,7 @@
             left: 15px;
             right: 15px;
         }
-        background: $primary;
+        background: $alpha;
         transform: translate(-100%, 0);
         transition: {
             property: transform;
@@ -60,7 +60,7 @@
     width: 32px;
     height: 1px;
     transform: translateX(-100%);
-    background-color: $primary;
+    background-color: $alpha;
     transition: {
         property: transform;
         duration: $duration;
@@ -74,6 +74,6 @@
 
 .nav_theme_white {
     .nav__link {
-        color: $primary;
+        color: $alpha;
     }
 }

@@ -2,23 +2,38 @@ $sprite: '../img/sprites/sprite.svg#';
 
 // For project
 
-$dark: #364859;
-$white: #fff;
-$primary: #A62525;
-$primary-hover: #8B0E0E;
-
 $opacity0_7_9: .79;
 $opacity0_7: .7;
 $opacity0_5: .5;
+$opacity0_4: .4;
 $opacity0_3: .3;
 $opacity0_2: .2;
+
+$alpha: #A62525;
+$alpha-hover: #8B0E0E;
+
+$beta:  #364859;
+$beta-medium:   rgba($beta, $opacity0_7);
+$beta-normal:   rgba($beta, $opacity0_5);
+$beta-light:    rgba($beta, $opacity0_4);
+$beta-lighter:  rgba($beta, $opacity0_3);
+$beta-lightest: rgba($beta, $opacity0_2);
+
+$gamma: #fff;
+$gamma-medium:   rgba($gamma, $opacity0_7);
+$gamma-normal:   rgba($gamma, $opacity0_5);
+$gamma-light:    rgba($gamma, $opacity0_4);
+$gamma-lighter:  rgba($gamma, $opacity0_3);
+$gamma-lightest: rgba($gamma, $opacity0_2);
+
+
 
 
 
 $font-muller:       'Muller';
 $font-family-base:  $font-muller, sans-serif;
-$body-bg:           $dark;
-$primary-color:     $dark;
+$body-bg:           $beta;
+$beta-color:     $beta;
 
 $h1: 48;
 $h2: 40;
