@@ -1,0 +1,80 @@
+	mixin demo-svg()
+    -
+        const demoSvg = [
+            {
+                name: 'arrow-long',
+                viewbox: false
+            },
+            {
+                name: 'arrow-short',
+                viewbox:  false
+            },
+            {
+                name: 'bookmark',
+                viewbox:  false
+            },
+            {
+                name: 'cart',
+                viewbox:  false
+            },
+            {
+                name: 'check',
+                viewbox:  false
+            },
+            {
+                name: 'fb',
+                viewbox: false
+            },
+            {
+                name: 'insta',
+                viewbox: false
+            },
+            {
+                name: 'minus',
+                viewbox: false
+            },
+            {
+                name: 'paper',
+                viewbox:  false
+            },
+            {
+                name: 'phone',
+                viewbox:  false
+            },
+            {
+                name: 'plus',
+                viewbox: false
+            },
+            {
+                name: 'search',
+                viewbox: false
+            },
+            {
+                name: 'shield',
+                viewbox: false
+            },
+            {
+                name: 'update',
+                viewbox: false
+            },
+            {
+                name: 'vk',
+                viewbox: false
+            },
+            {
+                name: 'wrench',
+                viewbox: false
+            },
+        ];
+    .demo-svg
+        .container
+            h1.demo-svg__title.h1-heading Demo page
+            ul.demo-svg__list
+                each val, index in demoSvg
+                    li.demo-svg__item
+                        +icon({ className: 	'demo-svg__img',
+                                svgName: 	val.name,
+                                viewBoxName: val.viewbox })
+                        .demo-svg__info
+                            h4.demo-svg__name.h4-heading= val.name
+                            p.demo-svg__name.text-large= val.viewbox
