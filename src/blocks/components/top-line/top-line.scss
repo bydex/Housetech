@@ -1,0 +1,49 @@
+.top-line {
+    @media (max-width: $break_lg) {
+        justify-content: space-between;
+    }
+    @include padding(top, level_15);
+    @include padding(bottom, level_5);
+    display: flex;
+    align-items: center;
+
+    &__logo-link {
+
+    }
+    &__logo {
+
+    }
+    &__nav {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+    &__phone {
+        @media (max-width: $break_xs) {
+            display: none;
+        }
+        position: relative;
+        padding-left: 24px;
+        text-decoration: none;
+        font-size: rem($text-large);
+    }
+    &__phone-icon {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-60%);
+        max-height: 16px;
+        max-width: 16px;
+        fill: $primary;
+    }
+}
+.top-line_theme_white {
+    .top-line__phone {
+        color: $white;
+    }
+}
+.top-line_theme_dark {
+    .top-line__phone {
+        color: $dark;
+    }
+}

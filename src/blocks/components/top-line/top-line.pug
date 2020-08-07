@@ -1,0 +1,19 @@
+include ../nav/nav
+include ../hamburger/hamburger
+
+mixin top-line({className = false})
+    .top-line(class=className)
+        a.top-line__logo-link(href="")
+            +picture({
+                name: 'logo',
+                imgType: 'png',
+                imgClass: 'top-line__logo'
+            })
+        +nav({className: 'top-line__nav nav_theme_white'})
+        a.top-line__phone(href="tel:+79990000000")
+            +icon({
+                className: 'svg-icon top-line__phone-icon',
+                svgName: 'phone'
+            })
+            | +7 (999) 000-00-00
+        +hamburger

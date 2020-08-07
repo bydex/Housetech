@@ -1,0 +1,7 @@
+include ../../components/btn/btn
+include ../../components/top-line/top-line
+
+mixin header({className = false})
+    header.header(class=className)
+        .container
+            +top-line({className: 'top-line_theme_white'})

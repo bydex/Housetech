@@ -1,0 +1,14 @@
+mixin nav({className = false, activeLink = '/'})
+    -
+        const pageNames = [{title: 'О нас',   link: '#about'},
+                          {title: 'Продукция',    link: '3products'},
+                          {title: 'Связаться с нами',  link: '#form'} ];
+    nav.nav(class=className)
+        ul.nav__links
+            each val, index in pageNames
+                if (val.link !== activeLink)
+                    li.nav__item
+                        a.nav__link(href=val.link)= val.title
+                else
+                    li.nav__item
+                        a.nav__link.nav__link_active(href=val.link)= val.title
