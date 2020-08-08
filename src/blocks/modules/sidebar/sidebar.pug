@@ -1,3 +1,11 @@
+mixin sidebar__item({paragraphText, iconName})
+    .sidebar__item
+        p.sidebar__paragraph #{paragraphText}
+            +icon({
+                className: 'svg-icon svg-icon_theme_red sidebar__icon',
+                svgName: iconName,
+            })
+
 include ../../components/search/search
 include ../../components/dropdown-menu/dropdown-menu
 mixin sidebar()
@@ -5,11 +13,12 @@ mixin sidebar()
         const
             stackTech = ['Гидравлические тележки', 'Подъёмные столы', 'Полуэлектрические штабелеры', 'Гидравлические штабелеры', 'Складские тележки', 'Электрические штабелеры']
     section.sidebar
-        +search({
-            text: 'Поиск по сайту',
-            icon: 'search',
-        })
         .sidebar__content
+            +search({
+                text: 'Поиск по сайту',
+                icon: 'search',
+            })
+        .sidebar__content.sidebar__content_offset_big
             +dropdown-menu({
                 parentClass: 'sidebar__dropdown-menu',
                 items: stackTech,
@@ -34,4 +43,9 @@ mixin sidebar()
                 parentClass: 'sidebar__dropdown-menu',
                 items: stackTech,
                 dropdownTitle: 'Запчасти',
+            })
+        .sidebar__content.sidebar__content_offset_small
+            +sidebar__item({
+                paragraphText: 'Сервис',
+                iconName: 'wrench',
             })
