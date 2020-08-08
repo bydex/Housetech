@@ -47,9 +47,13 @@
     }
 
     &__list {
+        margin-top: 17px;
         max-height: 0;
         overflow: hidden;
         transition: max-height $duration ease-out;
+    }
+    &__item + &__item {
+        margin-top: 15px;
     }
     &__link {
         display: inline-block;
