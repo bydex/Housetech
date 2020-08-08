@@ -5,23 +5,27 @@ include ../enter/enter
 mixin top-line({className = false})
     .top-line(class=className)
         .top-line__logo
-            +icon({ className: 	'top-line__logo-img',
-                    svgName: 	'logo',
-                    viewBoxName:    '0 0 151 20' })
-        .container.top-line__container
-            .row.top-line__inner
-                p.top-line__info надежный поставщик<br>складской техники в Казахстане
-                a.top-line__phone-wrapper(href="tel:+77786714499")
-                    .top-line__icon-wrapper.circle-icon.circle-icon_alpha
-                        +icon({ className: 	'top-line__icon circle-icon__icon',
-                                svgName: 	'phone' })
-                    .top-line__phone-inner
-                        .top-line__phone +7 (778) 671 44 99
-                        p.top-line__subtitle с 9:00 до 18:00 ежедневно
-                    +enter({ className: 'top-line__enter' })
-                    a.top-line__icon-wrapper.circle-icon.circle-icon_alpha(href="/bookmarks")
-                        +icon({ className: 	'top-line__icon circle-icon__icon',
-                                svgName: 	'bookmark' })
-                    a.top-line__icon-wrapper.circle-icon.circle-icon_alpha(href="/basket")
-                        +icon({ className: 	'top-line__icon circle-icon__icon',
-                                svgName: 	'cart' })
+            a(href="/")
+                +icon({ className: 	'top-line__logo-img',
+                        svgName: 	'logo',
+                        viewBoxName:    '0 0 151 20' })
+        .top-line__container
+            .container.top-line__container-inner
+                .row.top-line__inner
+                    p.top-line__info надежный поставщик<br>складской техники в Казахстане
+                    a.top-line__phone-wrapper(href="tel:+77786714499")
+                        .circle-icon.circle-icon_alpha
+                            +icon({ className: 	'top-line__icon circle-icon__icon',
+                                    svgName: 	'phone' })
+                        .top-line__phone-inner
+                            .top-line__phone +7 (778) 671 44 99
+                            p.top-line__subtitle с 9:00 до 18:00 ежедневно
+                    +enter({ className: 'top-line__enter',
+                             childClassName: 'top-line__enter-item' })
+                    .top-line__icons
+                        a.top-line__icon-wrapper.circle-icon.circle-icon_alpha(href="/bookmarks")
+                            +icon({ className: 	'top-line__icon circle-icon__icon',
+                                    svgName: 	'bookmark' })
+                        a.top-line__icon-wrapper.circle-icon.circle-icon_alpha(href="/basket")
+                            +icon({ className: 	'top-line__icon circle-icon__icon',
+                                    svgName: 	'cart' })

@@ -1,5 +1,7 @@
 $sprite: '../img/sprites/sprite.svg#';
 
+$break_mdd: 1200px;
+
 // For project
 
 $opacity0_7_9: .79;
@@ -79,6 +81,7 @@ $text-lg-big:      15;
 $text-lg-large:    14;
 $text-lg-normal:   14;
 $text-lg-small:    12;
+$text-lg-smaller:  12;
 $text-lg-smallest: 8;
 
 $text-md-largest:  30;
@@ -88,6 +91,7 @@ $text-md-big:      15;
 $text-md-large:    12;
 $text-md-normal:   14;
 $text-md-small:    12;
+$text-md-smaller:  12;
 $text-md-smallest: 8;
 
 $text-sm-largest:  22;
@@ -97,7 +101,8 @@ $text-sm-big:      15;
 $text-sm-large:    12;
 $text-sm-normal:   12;
 $text-sm-small:    10;
-$text-md-smallest: 8;
+$text-sm-smaller:  10;
+$text-sm-smallest: 8;
 
 @mixin text-largest {
     @include lg(font-size, rem($text-lg-largest));
@@ -134,6 +139,12 @@ $text-md-smallest: 8;
     @include md(font-size, rem($text-md-small));
     @include sm(font-size, rem($text-sm-small));
     font-size: rem($text-small);
+}
+@mixin text-smaller {
+    @include lg(font-size, rem($text-lg-smaller));
+    @include md(font-size, rem($text-md-smaller));
+    @include sm(font-size, rem($text-sm-smaller));
+    font-size: rem($text-smaller);
 }
 @mixin text-smallest {
     @include lg(font-size, rem($text-lg-smallest));

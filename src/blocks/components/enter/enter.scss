@@ -12,11 +12,15 @@
         &:hover {
             color: $alpha;
         }
-        &:last-child:after {
+        &:after {
             content: '/';
             display: inline-block;
             margin-left: 6px;
             margin-right: 6px;
+            color: $gamma;
+        }
+        &:last-child:after {
+            content: none;
         }
     }
     &__link {
