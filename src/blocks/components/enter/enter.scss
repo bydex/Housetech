@@ -1,0 +1,25 @@
+.enter {
+    display: flex;
+
+    &__item {
+        @include text-small();
+        color: $gamma;
+        transition: {
+            property: color;
+            duration: $duration;
+        }
+
+        &:hover {
+            color: $alpha;
+        }
+        &:last-child:after {
+            content: '/';
+            display: inline-block;
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+    }
+    &__link {
+        color: inherit;
+    }
+}

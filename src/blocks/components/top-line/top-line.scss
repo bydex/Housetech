@@ -1,49 +1,43 @@
 .top-line {
-    @media (max-width: $break_lg) {
-        justify-content: space-between;
-    }
-    @include padding(top, level_15);
-    @include padding(bottom, level_5);
     display: flex;
-    align-items: center;
 
-    &__logo-link {
-
-    }
     &__logo {
-
-    }
-    &__nav {
         display: flex;
         justify-content: center;
+        align-items: center;
+        max-width: $sidebar;
+        min-width: $sidebar;
+        background-color: $gamma;
+    }
+    &__logo-img {
+
+    }
+    &__container {
+
+    }
+    &__info {
+        @include text-small();
+        @include col();
         flex-grow: 1;
+        line-height: 128%;
+    }
+    &__phone-wrapper {
+        @include col();
+        display: flex;
+    }
+    &__phone-inner {
+        margin-left: 32px;
     }
     &__phone {
-        @media (max-width: $break_xs) {
-            display: none;
-        }
-        position: relative;
-        padding-left: 24px;
-        text-decoration: none;
-        font-size: rem($text-large);
+
     }
-    &__phone-icon {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-60%);
-        max-height: 16px;
-        max-width: 16px;
-        fill: $alpha;
+    &__subtitle {
+
     }
-}
-.top-line_theme_white {
-    .top-line__phone {
-        color: $gamma;
+    &__icon-wrapper {
+
     }
-}
-.top-line_theme_dark {
-    .top-line__phone {
-        color: $beta;
+    &__icon {
+
     }
 }

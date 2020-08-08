@@ -109,3 +109,37 @@ body {
     @include h2();
     line-height: 120%;
 }
+
+
+.circle-icon {
+    min-width: 40px;
+    max-width: 40px;
+    min-height: 40px;
+    max-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 50%;
+
+    &__icon {
+        max-width: 17px;
+        max-height: 17px;
+    }
+}
+.circle-icon_alpha {
+    background-color: $alpha;
+    border-color: $alpha;
+
+    .circle-icon__icon {
+        fill: $gamma;
+    }
+}
+.circle-icon_gamma {
+    background-color: $gamma;
+    border-color: $beta;
+
+    .circle-icon__icon {
+        fill: $beta;
+    }
+}
