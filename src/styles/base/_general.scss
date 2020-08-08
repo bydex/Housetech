@@ -77,6 +77,11 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .no-events {
     pointer-events: none;
     cursor: pointer;
@@ -121,15 +126,32 @@ body {
     align-items: center;
     border: 1px solid;
     border-radius: 50%;
+    transition: {
+        property: background-color, border-color;
+        duration: $duration;
+    }
 
     &__icon {
         max-width: 17px;
         max-height: 17px;
+        transition: {
+            property: fill;
+            duration: $duration;
+        }
     }
 }
 .circle-icon_alpha {
     background-color: $alpha;
     border-color: $alpha;
+
+    &:hover {
+        background-color: $gamma;
+        border-color: $gamma;
+
+        .circle-icon__icon {
+            fill: $alpha;
+        }
+    }
 
     .circle-icon__icon {
         fill: $gamma;

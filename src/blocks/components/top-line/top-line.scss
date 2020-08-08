@@ -29,7 +29,8 @@
         margin-left: 32px;
     }
     &__phone {
-
+        @include text-big();
+        font-family: $font-beta;
     }
     &__subtitle {
 
