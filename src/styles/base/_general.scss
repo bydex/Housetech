@@ -109,6 +109,12 @@ a {
                 fill: $beta;
             }
         }
+        &_red {
+            use {
+                @include trans(fill, linear, $duration);
+                fill: $alpha;
+            }
+        }
     }
 }
 
