@@ -6,7 +6,9 @@
     background-color: darken($beta, 5);
 
     &__title {
+        @include h1();
         margin-bottom: 40px;
+        line-height: 150%;
         font-weight: 600;
         color: $gamma;
     }

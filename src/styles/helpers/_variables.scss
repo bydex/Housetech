@@ -49,14 +49,14 @@ $h2-sm: 21;
 
 @mixin h1 {
     @include lg(font-size, rem($h1-lg));
-    @include md(font-size, $h1-md);
-    @include sm(font-size, $h1-sm);
+    @include md(font-size, rem($h1-md));
+    @include sm(font-size, rem($h1-sm));
     font-size: rem($h1);
 }
 @mixin h2 {
-    @include lg(font-size, $h2-lg);
-    @include md(font-size, $h2-md);
-    @include sm(font-size, $h2-sm);
+    @include lg(font-size, rem($h2-lg));
+    @include md(font-size, rem($h2-md));
+    @include sm(font-size, rem($h2-sm));
     font-size: rem($h2);
 }
 
@@ -97,45 +97,45 @@ $text-sm-small:    10;
 $text-md-smallest: 8;
 
 @mixin text-largest {
-    @include lg(font-size, $text-lg-largest);
-    @include md(font-size, $text-md-largest);
-    @include sm(font-size, $text-sm-largest);
+    @include lg(font-size, rem($text-lg-largest));
+    @include md(font-size, rem($text-md-largest));
+    @include sm(font-size, rem($text-sm-largest));
     font-size: rem($text-largest);
 }
 @mixin text-bigger {
-    @include lg(font-size, $text-lg-bigger);
-    @include md(font-size, $text-md-bigger);
-    @include sm(font-size, $text-sm-bigger);
+    @include lg(font-size, rem($text-lg-bigger));
+    @include md(font-size, rem($text-md-bigger));
+    @include sm(font-size, rem($text-sm-bigger));
     font-size: rem($text-bigger);
 }
 @mixin text-big {
-    @include lg(font-size, $text-lg-big);
-    @include md(font-size, $text-md-big);
-    @include sm(font-size, $text-sm-big);
+    @include lg(font-size, rem($text-lg-big));
+    @include md(font-size, rem($text-md-big));
+    @include sm(font-size, rem($text-sm-big));
     font-size: rem($text-big);
 }
 @mixin text-large {
-    @include lg(font-size, $text-lg-large);
-    @include md(font-size, $text-md-large);
-    @include sm(font-size, $text-sm-large);
+    @include lg(font-size, rem($text-lg-large));
+    @include md(font-size, rem($text-md-large));
+    @include sm(font-size, rem($text-sm-large));
     font-size: rem($text-large);
 }
 @mixin text-normal {
-    @include lg(font-size, $text-lg-normal);
-    @include md(font-size, $text-md-normal);
-    @include sm(font-size, $text-sm-normal);
+    @include lg(font-size, rem($text-lg-normal));
+    @include md(font-size, rem($text-md-normal));
+    @include sm(font-size, rem($text-sm-normal));
     font-size: rem($text-normal);
 }
 @mixin text-small {
-    @include lg(font-size, $text-lg-small);
-    @include md(font-size, $text-md-small);
-    @include sm(font-size, $text-sm-small);
+    @include lg(font-size, rem($text-lg-small));
+    @include md(font-size, rem($text-md-small));
+    @include sm(font-size, rem($text-sm-small));
     font-size: rem($text-small);
 }
 @mixin text-smallest {
-    @include lg(font-size, $text-lg-smallest);
-    @include md(font-size, $text-md-smallest);
-    @include sm(font-size, $text-sm-smallest);
+    @include lg(font-size, rem($text-lg-smallest));
+    @include md(font-size, rem($text-md-smallest));
+    @include sm(font-size, rem($text-sm-smallest));
     font-size: rem($text-smallest);
 }
 
@@ -146,3 +146,9 @@ $duration: .3s;
 
 $containerMax: 1342;
 $containerMin: 320;
+
+
+
+
+$sidebar: 384px;
+$sidebar-lg: 288px;

@@ -102,9 +102,10 @@ body {
 }
 
 .h1-heading {
-    // font-size: rem($h1);
     @include h1();
+    line-height: 150%;
 }
 .h2-heading {
-    font-size: rem($h2);
+    @include h2();
+    line-height: 120%;
 }
