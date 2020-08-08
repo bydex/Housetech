@@ -1,12 +1,33 @@
 .search {
+    position: relative;
     width: 100%;
-    @include border($border-width, $border-color, bottom);
+    padding: {
+        top: 20px;
+        right: 77px;
+        bottom: 20px;
+        left: 77px;
+    }
+    @include border($border-width, rgba($border-color, $opacity0_1), bottom);
+    &__input {
+        position: relative;
+        width: 100%;
+        border: none;
+    }
     &__input::placeholder {
         @media (max-width: $break_lg) {
             font-size: rem($text-lg-small);
         }
-        position: relative;
         font-size: rem($text-small);
-        color: $beta;
+        color: $beta-normal;
+        border: none;
+    }
+    &__icon {
+        position: absolute;
+        left: 40px;
+        top: 50%;
+        bottom: 50%;
+        width: 18px;
+        height: 18px;
+        margin: auto 0;
     }
 }
