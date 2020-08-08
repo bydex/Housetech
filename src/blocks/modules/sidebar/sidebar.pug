@@ -1,2 +1,7 @@
+include ../../components/search/search
 mixin sidebar()
     section.sidebar
+        +search({
+            text: 'Поиск по сайту',
+            icon: 'search',
+        })

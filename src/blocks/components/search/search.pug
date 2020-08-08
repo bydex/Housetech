@@ -1,3 +1,8 @@
-mixin search({})
+mixin search({text, icon})
     label.search(for="")
-        input.search__input
+        +icon({
+            className: 'svg-icon search__icon',
+            svgName: 'search',
+
+        })
+        input.search__input(type='text' placeholder=text)
