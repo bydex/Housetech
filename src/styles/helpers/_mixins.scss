@@ -1,5 +1,5 @@
-$container-xl: 1312px;
-$container-lg: 960px;
+$container: 1416px;
+$container-lg: 1090px;
 $container-md: 720px;
 $container-sm: 540px;
 
@@ -8,7 +8,7 @@ $container-sm: 540px;
   @include sm(max-width, $container-sm);
   @include md(max-width, $container-md);
   @include lg(max-width, $container-lg);
-  @include xl(max-width, $container-xl);
+  max-width: $container;
 }
 
 .row {
@@ -28,13 +28,13 @@ $container-sm: 540px;
 }
 
 $levels: (
-    media:      (#{$break_xs}, #{$break_sm}, #{$break_md}, #{$break_lg}, #{$break_xl}),
-    //          320       576      768      968      1280
-    level_5:     (8px,  8px,  12px, 16px, 16px),
-    level_10:    (12px, 12px, 16px, 24px, 24px),
-    level_15:    (12px, 16px, 24px, 32px, 32px),
-    level_20:    (24px, 32px, 40px, 56px, 56px),
-    level_30:    (32px, 32px, 40px, 80px, 96px),
+    media:      (#{$break_xs}, #{$break_sm}, #{$break_md}, #{$break_lg}),
+    //            576      768      991      1440
+    level_5:     (8px,  8px,  12px, 16px),
+    level_10:    (12px, 12px, 16px, 24px),
+    level_15:    (12px, 16px, 24px, 32px),
+    level_20:    (24px, 32px, 40px, 56px),
+    level_30:    (32px, 32px, 40px, 80px),
 );
 
 @mixin margin($direction, $color) {

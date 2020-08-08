@@ -8,14 +8,14 @@ gulp.task("smart-grid", (cb) => {
         outputStyle: "scss",
         filename: "_smart-grid",
         columns: 12, // number of grid columns
-        offset: "30px",
+        offset: "40px",
         mobileFirst: false,
         mixinNames: {
             container: "container",
         },
         container: {
-            fields: "15px",
-            maxWidth: "1342px"
+            fields: "20px",
+            maxWidth: "1416px"
         },
         breakPoints: {
             xs: {
@@ -25,16 +25,10 @@ gulp.task("smart-grid", (cb) => {
                 width: "768px"
             },
             md: {
-                width: "968px"
+                width: "991px"
             },
             lg: {
-                width: "1366px"
-            },
-            xl: {
-                width: "1920px"
-            },
-            xxl: {
-                width: "2560px"
+                width: "1440px"
             },
         }
     });

@@ -38,10 +38,29 @@ $beta-color:     $beta;
 $h1: 50;
 $h2: 42;
 
+$h1-lg: 36;
+$h2-lg: 28;
 
-$height-alpha: 160%;
-$height-beta: 150%;
-$height-gamma: 150%;
+$h1-md: 28;
+$h2-md: 24;
+
+$h1-sm: 26;
+$h2-sm: 21;
+
+@mixin h1 {
+    @include lg(font-size, $h1-lg);
+    @include md(font-size, $h1-md);
+    @include sm(font-size, $h1-sm);
+    font-size: rem($h1);
+}
+@mixin h2 {
+    @include lg(font-size, $h2-lg);
+    @include md(font-size, $h2-md);
+    @include sm(font-size, $h2-sm);
+    font-size: rem($h2);
+}
+
+
 
 $text-largest:  58;
 $text-bigger:   38;
@@ -49,7 +68,76 @@ $text-big:      20;
 $text-large:    18;
 $text-normal:   16;
 $text-small:    14;
-$text-smallest: 12;
+$text-smallest: 10;
+
+$text-lg-largest:  40;
+$text-lg-bigger:   24;
+$text-lg-big:      15;
+$text-lg-large:    14;
+$text-lg-normal:   14;
+$text-lg-small:    12;
+$text-lg-smallest: 8;
+
+$text-md-largest:  30;
+$text-md-bigger:   18;
+// не точно
+$text-md-big:      15;
+$text-md-large:    12;
+$text-md-normal:   14;
+$text-md-small:    12;
+$text-md-smallest: 8;
+
+$text-sm-largest:  22;
+$text-sm-bigger:   18;
+// не точно
+$text-sm-big:      15;
+$text-sm-large:    12;
+$text-sm-normal:   12;
+$text-sm-small:    10;
+$text-md-smallest: 8;
+
+@mixin text-largest {
+    @include lg(font-size, $text-lg-largest);
+    @include md(font-size, $text-md-largest);
+    @include sm(font-size, $text-sm-largest);
+    font-size: rem($text-largest);
+}
+@mixin text-bigger {
+    @include lg(font-size, $text-lg-bigger);
+    @include md(font-size, $text-md-bigger);
+    @include sm(font-size, $text-sm-bigger);
+    font-size: rem($text-bigger);
+}
+@mixin text-big {
+    @include lg(font-size, $text-lg-big);
+    @include md(font-size, $text-md-big);
+    @include sm(font-size, $text-sm-big);
+    font-size: rem($text-big);
+}
+@mixin text-large {
+    @include lg(font-size, $text-lg-large);
+    @include md(font-size, $text-md-large);
+    @include sm(font-size, $text-sm-large);
+    font-size: rem($text-large);
+}
+@mixin text-normal {
+    @include lg(font-size, $text-lg-normal);
+    @include md(font-size, $text-md-normal);
+    @include sm(font-size, $text-sm-normal);
+    font-size: rem($text-normal);
+}
+@mixin text-small {
+    @include lg(font-size, $text-lg-small);
+    @include md(font-size, $text-md-small);
+    @include sm(font-size, $text-sm-small);
+    font-size: rem($text-small);
+}
+@mixin text-smallest {
+    @include lg(font-size, $text-lg-smallest);
+    @include md(font-size, $text-md-smallest);
+    @include sm(font-size, $text-sm-smallest);
+    font-size: rem($text-smallest);
+}
 
 $border-radius-small:   2px;
 $border-radius-biggest: 50px;

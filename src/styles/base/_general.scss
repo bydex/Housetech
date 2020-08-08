@@ -1,3 +1,58 @@
+
+// .sidebar {
+//     // content
+//     content: '';
+
+//     // positioning
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     transform: translate(-50%, -50%);
+
+//     // box model
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     min-width: 400px;
+//     min-height: 400px;
+//     width: 400px;
+//     height: 400px;
+//     overflow: hidden;
+//     box-sizing: border-box;
+//     padding: 50px;
+//     margin: 50px;
+
+//     // fonts
+//     font-size: $h1;
+//     font-weight: 400;
+//     color: $alpha;
+//     text-transform: uppercase;
+
+//     // Beautifull
+//     background-color: $beta;
+//     border: {
+//         color: $beta;
+//         width: 1px;
+//         style: solid;
+//     }
+//     opacity: 1;
+
+//     // Other
+//     user-select: none;
+//     cursor: pointer;
+
+//     // transitions
+//     transition: {
+//         property: background-color;
+//         duration: .3s;
+//     }
+// }
+
+
+
+
+
+
 h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
     padding: 0;
@@ -47,40 +102,8 @@ body {
 }
 
 .h1-heading {
-    @media (max-width: $break_xxl) {
-        font-size: fontSize(37, 24);
-    }
     font-size: rem($h1);
-    line-height: $height-alpha;
 }
 .h2-heading {
     font-size: rem($h2);
-    line-height: $height-beta;
-}
-
-.text {
-    &_smallest {
-        font-size: rem($text-smallest);
-    }
-    &_small {
-        font-size: rem($text-small);
-    }
-    &_normal {
-        font-size: rem($text-normal);
-    }
-    &_large {
-        font-size: rem($text-large);
-    }
-    &_big {
-        @media (max-width: $break_xxl) {
-            font-size: fontSize(24, 16);
-        }
-        font-size: rem($text-big);
-    }
-    &_bigger {
-        font-size: rem($text-bigger);
-    }
-    &_large {
-        font-size: rem($text-largest);
-    }
 }

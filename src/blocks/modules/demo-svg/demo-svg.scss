@@ -8,7 +8,7 @@
     &__title {
         margin-bottom: 40px;
         font-weight: 600;
-        color: $alpha;
+        color: $gamma;
     }
     &__list {
         @include row-flex();
@@ -31,6 +31,6 @@
         width: 100%;
         max-width: 80px;
         max-height: 80px;
-        fill: $alpha;
+        fill: $gamma;
     }
 }
