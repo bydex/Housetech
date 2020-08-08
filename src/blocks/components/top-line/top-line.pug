@@ -18,9 +18,9 @@ mixin top-line({className = false})
                         .top-line__phone +7 (778) 671 44 99
                         p.top-line__subtitle с 9:00 до 18:00 ежедневно
                     +enter({ className: 'top-line__enter' })
-                    a.top-line__icon-wrapper(href="/bookmarks")
-                        +icon({ className: 	'top-line__icon',
+                    a.top-line__icon-wrapper.circle-icon.circle-icon_alpha(href="/bookmarks")
+                        +icon({ className: 	'top-line__icon circle-icon__icon',
                                 svgName: 	'bookmark' })
-                    a.top-line__icon-wrapper(href="/basket")
-                        +icon({ className: 	'top-line__icon',
+                    a.top-line__icon-wrapper.circle-icon.circle-icon_alpha(href="/basket")
+                        +icon({ className: 	'top-line__icon circle-icon__icon',
                                 svgName: 	'cart' })
