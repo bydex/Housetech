@@ -1,7 +1,37 @@
 include ../../components/search/search
+include ../../components/dropdown-menu/dropdown-menu
 mixin sidebar()
+    -
+        const
+            stackTech = ['Гидравлические тележки', 'Подъёмные столы', 'Полуэлектрические штабелеры', 'Гидравлические штабелеры', 'Складские тележки', 'Электрические штабелеры']
     section.sidebar
         +search({
             text: 'Поиск по сайту',
             icon: 'search',
         })
+        .sidebar__content
+            +dropdown-menu({
+                parentClass: 'sidebar__dropdown-menu',
+                items: stackTech,
+                dropdownTitle: 'СКЛАДСКАЯ ТЕХНИКА',
+            })
+            +dropdown-menu({
+                parentClass: 'sidebar__dropdown-menu',
+                items: stackTech,
+                dropdownTitle: 'ВИЛОЧНЫЕ ПОГРУЗЧИКИ',
+            })
+            +dropdown-menu({
+                parentClass: 'sidebar__dropdown-menu',
+                items: stackTech,
+                dropdownTitle: 'ПЛАСТИКОВАЯ ТАРА',
+            })
+            +dropdown-menu({
+                parentClass: 'sidebar__dropdown-menu',
+                items: stackTech,
+                dropdownTitle: 'ШИНЫ ДЛЯ СПЕЦ.ТЕХНИКИ',
+            })
+            +dropdown-menu({
+                parentClass: 'sidebar__dropdown-menu',
+                items: stackTech,
+                dropdownTitle: 'Запчасти',
+            })

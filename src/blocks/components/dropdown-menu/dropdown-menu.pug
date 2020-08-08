@@ -1,0 +1,19 @@
+mixin dropdown-menu({parentClass = false, items, dropdownTitle })
+    .dropdown-menu(class=parentClass)
+        a.dropdown-menu__title #{dropdownTitle}
+        ul.dropdown-menu__list
+            each value in items
+                li.dropdown-menu__item
+                    a.dropdown-menu__link(href="#") #{value}
+            //- li.dropdown-menu__item
+            //-     a.dropdown-menu__link(href="#") Lorem, ipsum.
+            //- li.dropdown-menu__item
+            //-     a.dropdown-menu__link(href="#") Lorem, ipsum.
+            //- li.dropdown-menu__item
+            //-     a.dropdown-menu__link(href="#") Lorem, ipsum.
+            //- li.dropdown-menu__item
+            //-     a.dropdown-menu__link(href="#") Lorem, ipsum.
+            //- li.dropdown-menu__item
+            //-     a.dropdown-menu__link(href="#") Lorem, ipsum.
+            //- li.dropdown-menu__item
+            //-     a.dropdown-menu__link(href="#") Lorem, ipsum.

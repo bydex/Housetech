@@ -1,0 +1,61 @@
+.dropdown-menu {
+    &__title {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        @include text-normal();
+        font: {
+            weight: 600;
+        }
+        color: $beta;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    &__title:before, &__title:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 10px;
+        width: 10px;
+        height: 2px;
+        background-image: url(../img/sprites/sprite.svg#minus);
+        background-position: center center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        opacity: $opacity0_3;
+        transition: opacity $duration linear;
+        // transition-delay: $duration;
+    }
+    &__title:after {
+        transform: rotate(90deg);
+        transition: transform $duration linear;
+    }
+    &__title_active:after {
+        transform: rotate(0deg);
+        opacity: 1;
+        transition: {
+            property: transform, opacity;
+            // delay: 0s, $duration;
+            duration: $duration;
+            timing-function: linear;
+        }
+    }
+    &__title_active:before {
+        opacity: 1;
+        transition: opacity $duration linear;
+    }
+
+    &__list {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height $duration ease-out;
+    }
+    &__link {
+        display: inline-block;
+        position: relative;
+        @include text-small();
+        color: inherit;
+        opacity: $opacity0_5;
+    }
+}

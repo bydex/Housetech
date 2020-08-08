@@ -1,10 +1,10 @@
-const hamburger = document.querySelector('.hamburger'),
-    navigation = document.querySelector('.nav');
+// const hamburger = document.querySelector('.hamburger'),
+//     navigation = document.querySelector('.nav');
 
-console.log(hamburger)
+// console.log(hamburger)
 
-hamburger.addEventListener('click', e => {
-    e.preventDefault();
-    hamburger.classList.toggle('hamburger_active');
-    navigation.classList.toggle('nav_active')
-})
+// hamburger.addEventListener('click', e => {
+//     e.preventDefault();
+//     hamburger.classList.toggle('hamburger_active');
+//     navigation.classList.toggle('nav_active')
+// })
