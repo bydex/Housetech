@@ -27,6 +27,36 @@ $container-sm: 540px;
   }
 }
 
+@mixin border($width, $color, $position) {
+  border: {
+    @if $position == top {
+      top-width: $width;
+      top-style: solid;
+      top-color: $color;
+    }
+    @if $position == right {
+      right-width: $width;
+      right-style: solid;
+      right-color: $color;
+    }
+    @if $position == bottom {
+      bottom-width: $width;
+      bottom-style: solid;
+      bottom-color: $color;
+    }
+    @if $position == left {
+      left-width: $width;
+      left-style: solid;
+      left-color: $color;
+    }
+    @if $position == null {
+      border-width: $width;
+      border-style: solid;
+      border-color: $color;
+    }
+  }
+}
+
 $levels: (
     media:      (#{$break_xs}, #{$break_sm}, #{$break_md}, #{$break_lg}),
     //            576      768      991      1440

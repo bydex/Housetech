@@ -1,0 +1,12 @@
+.sidebar {
+    @media (max-width: $break_lg) {
+        max-width: $sidebar-lg;
+    }
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    max-width: $sidebar;
+    padding-top: 91px;
+    background-color: $gamma;
+}

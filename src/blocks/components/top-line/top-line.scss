@@ -4,6 +4,7 @@
     }
     @include padding(top, level_15);
     @include padding(bottom, level_5);
+    @include border(1px, #000, bottom);
     display: flex;
     align-items: center;
 

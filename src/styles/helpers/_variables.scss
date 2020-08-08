@@ -139,6 +139,7 @@ $text-md-smallest: 8;
     font-size: rem($text-smallest);
 }
 
+$border-color: $beta;
 $border-radius-small:   2px;
 $border-radius-biggest: 50px;
 
@@ -146,9 +147,6 @@ $duration: .3s;
 
 $containerMax: 1342;
 $containerMin: 320;
-
-
-
 
 $sidebar: 384px;
 $sidebar-lg: 288px;
