@@ -30,8 +30,8 @@ $gamma-lightest: rgba($gamma, $opacity0_2);
 
 
 
-$font-alpha:       'Muller';
-$font-family-base:  $font-alpha, sans-serif;
+$font-alpha:       'IBM Plex Sans', sans-serif;
+$font-family-base:  $font-alpha;
 $body-bg:           $gamma;
 $beta-color:     $beta;
 
@@ -48,7 +48,7 @@ $h1-sm: 26;
 $h2-sm: 21;
 
 @mixin h1 {
-    @include lg(font-size, $h1-lg);
+    @include lg(font-size, rem($h1-lg));
     @include md(font-size, $h1-md);
     @include sm(font-size, $h1-sm);
     font-size: rem($h1);
