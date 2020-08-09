@@ -8,12 +8,14 @@ mixin sidebar__item({paragraphText, iconName})
 
 include ../../components/search/search
 include ../../components/dropdown-menu/dropdown-menu
+include ../../components/extra/extra
 mixin sidebar()
     -
         const
             stackTech = ['Гидравлические тележки', 'Подъёмные столы', 'Полуэлектрические штабелеры', 'Гидравлические штабелеры', 'Складские тележки', 'Электрические штабелеры']
+            extraItems = ['Акции', 'Доставка и оплата', 'Контакты']
     section.sidebar
-        .sidebar__content
+        .sidebar__content.sidebar__content_offset_left-0
             +search({
                 text: 'Поиск по сайту',
                 icon: 'search',
@@ -48,4 +50,10 @@ mixin sidebar()
             +sidebar__item({
                 paragraphText: 'Сервис',
                 iconName: 'wrench',
+            })
+        .sidebar__content.sidebar__content_offset_big
+            +extra({
+                parentClass: 'sidebar__extra',
+                linkClass: 'dropdown-menu__title',
+                items: extraItems,
             })

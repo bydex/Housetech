@@ -1,9 +1,12 @@
 .dropdown-menu {
     &__title {
+        @media (max-width: $break_lg) {
+            font-size: rem($text-lg-small);
+        }
         position: relative;
         display: inline-block;
         width: 100%;
-        @include text-normal();
+        font-size: $text-normal;
         font: {
             weight: 600;
         }
@@ -13,16 +16,21 @@
         text-transform: uppercase;
     }
     &__title:before, &__title:after {
+        @media (max-width: $break_lg) {
+            right: 33px;
+            top: 7px;
+        }
         content: '';
         position: absolute;
-        right: 0;
-        top: 10px;
+        right: 55px;
+        top: 9px;
         width: 10px;
         height: 2px;
-        background-image: url(../img/sprites/sprite.svg#minus);
-        background-position: center center;
-        background-size: 100%;
-        background-repeat: no-repeat;
+        background-color: $beta;
+        // background-image: url(../img/sprites/sprite.svg#minus);
+        // background-position: center center;
+        // background-size: 100%;
+        // background-repeat: no-repeat;
         opacity: $opacity0_3;
         transition: opacity $duration linear;
         // transition-delay: $duration;
@@ -47,7 +55,6 @@
     }
 
     &__list {
-        margin-top: 17px;
         max-height: 0;
         overflow: hidden;
         transition: max-height $duration ease-out;
@@ -61,5 +68,9 @@
         @include text-small();
         color: inherit;
         opacity: $opacity0_5;
+    }
+    &__link_active {
+        color: $alpha;
+        opacity: 1;
     }
 }

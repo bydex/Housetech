@@ -2,6 +2,11 @@ mixin dropdown-menu({parentClass = false, items, dropdownTitle })
     .dropdown-menu(class=parentClass)
         a.dropdown-menu__title #{dropdownTitle}
         ul.dropdown-menu__list
-            each value in items
-                li.dropdown-menu__item
-                    a.dropdown-menu__link(href="#") #{value}
+            - for (let i = 0; i <= items.length; i += 1) {
+                if i === 1
+                    li.dropdown-menu__item
+                        a.dropdown-menu__link(href="#" class="dropdown-menu__link_active") #{items[i]}
+                else    
+                    li.dropdown-menu__item
+                        a.dropdown-menu__link(href="#") #{items[i]}
+            - }

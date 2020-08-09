@@ -1,13 +1,9 @@
-modules.define('sidebar', ['i-bem-dom'], function(provide, bemDom) {
+if (document.querySelector('.sidebar')) {
+    const sidebar = document.querySelector('.sidebar');
+    const hamburger = document.querySelector('.hamburger');
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
-
-});
+    hamburger.addEventListener('click', e => {
+        e.preventDefault();
+        sidebar.classList.toggle('sidebar_active');
+    })
+}

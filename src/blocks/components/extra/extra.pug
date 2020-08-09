@@ -1,0 +1,6 @@
+mixin extra({parentClass = false, linkClass = false, items})
+    .extra(class= parentClass)
+        ul.extra__list
+            each value in items
+                li.extra__item
+                    a.extra__link(href="#" class= linkClass) #{value}

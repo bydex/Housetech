@@ -1,5 +1,5 @@
-mixin search({text, icon})
-    .search(for="")
+mixin search({parentClass = false, text, icon})
+    .search(class= parentClass)
         +icon({
             className: 'svg-icon svg-icon_theme_dark search__icon',
             svgName: 'search',

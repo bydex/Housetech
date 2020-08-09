@@ -1,6 +1,22 @@
 .sidebar {
     @media (max-width: $break_lg) {
+        min-width: $sidebar-lg;
         max-width: $sidebar-lg;
+    }
+    @media (max-width: $break_md) {
+        top: 55px;
+        padding-top: 0;
+        transform: translate(-100%, 0);
+        transition: transform $duration ease-in;
+        z-index: 21;
+        &_active {
+            transform: translate(0, 0);
+            transition: transform $duration ease-out;
+        }
+    }
+    @media (max-width: $break_sm) {
+        min-width: 100%;
+        // overflow-y: scroll;
     }
     position: fixed;
     top: 0;
@@ -11,17 +27,30 @@
     background-color: $gamma;
     &__content {
         padding-left: 40px;
-        @include border($border-width, rgba($border-color, $opacity0_1), bottom);
         &_offset {
             &_big {
+                @media (max-width: $break_lg) {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+                }
                 padding-top: 40px;
                 padding-bottom: 40px;
             }
             &_small {
+                @media (max-width: $break_lg) {
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                }
                 padding-top: 20px;
                 padding-bottom: 20px;       
             }
+            &_left-0 {
+                padding-left: 0;
+            }
         }
+    }
+    &__content:not(:last-of-type) {
+        @include border($border-width, rgba($border-color, $opacity0_1), bottom);
     }
     &__dropdown-menu  + &__dropdown-menu {
         margin-top: 28px
@@ -36,8 +65,13 @@
         display: none;
     }
     &__icon {
+        @media (max-width: $break_lg) {
+            right: 28px;
+            top: 1px;
+        }
         position: absolute;
-        right: 0;
+        right: 55px;
+        top: 2px;
         width: 18px;
         height: 18px;
     }

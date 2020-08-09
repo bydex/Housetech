@@ -1,0 +1,12 @@
+.extra {
+    &__link:before, &__link:after {
+        display: none;
+    }
+    &__item + &__item {
+        margin-top: 15px;
+    }
+    &__link {
+        @include text-small();
+        text-transform: inherit;
+    }
+}
