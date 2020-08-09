@@ -10,39 +10,14 @@
         family: inherit;
         size: rem($text-big);
     }
-    padding: {
-        top: 20px;
-        right: 82px;
-        bottom: 17px;
-        left: 80px;
-    };
     background: none;
     outline: none;
     box-shadow: none;
+    user-select: none;
     cursor: pointer;
-    background: $alpha;
-
-    &:after {
-        position: absolute;
-        z-index: -1;
-        left: 18px;
-        top: 100%;
-        transform: translate(0, -125%) rotate(45deg);
-        background-color: inherit;
-        pointer-events: none;
-        transition: {
-            property: transform;
-            duration: $duration;
-        };
-    }
-    &:hover {
-        &::after {
-            transform: translate(0, -50%) rotate(45deg);
-        }
-    }
 }
 .btn_theme {
-    &_secondary {
+    &_gamma {
         color: $alpha;
         background-color: $gamma;
 
@@ -51,7 +26,7 @@
             background-color: $alpha-hover;
         }
     }
-    &_primary {
+    &_alpha {
         color: $gamma;
         background-color: $alpha;
 
@@ -60,28 +35,28 @@
             background-color: $alpha;
         }
     }
-    &_blue {
-        color: $alpha;
-        background-color: $alpha;
-
-        &:hover, &.active {
-            color: $gamma;
-            background-color: $alpha;
-        }
-    }
-    &_transparent {
+    &_transparent-alpha {
         background: transparent;
         color: $alpha;
-        padding: {
-            top: 16px;
-            right: 62px;
-            bottom: 13px;
-            left: 62px;
-        };
         border: {
-            width: 4px;
+            width: 1px;
             style: solid;
             color: $alpha;
+        }
+    }
+    &_transparent-gamma {
+        background: transparent;
+        color: $beta;
+        border: {
+            width: 1px;
+            style: solid;
+            color: $beta-lighter;
+        }
+
+        &:hover {
+            color: $gamma;
+            background-color: $alpha;
+            border-color: $alpha;
         }
     }
 }
