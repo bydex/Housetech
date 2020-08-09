@@ -2,6 +2,9 @@
     display: flex;
     align-items: center;
 
+    &__icon-wrapper {
+        display: flex;
+    }
     &__icon {
         width: 24px;
         height: 24px;

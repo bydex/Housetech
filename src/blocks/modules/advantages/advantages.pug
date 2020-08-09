@@ -1,0 +1,43 @@
+include ../../components/btn/btn
+
+mixin advantages({ className = false })
+    -
+        const advantages = [
+            {
+                icon: 'adv-calendar',
+                title: 'Предоставляем круглогодичный сервис',
+                viewbox: '0 0 50 50'
+            },
+            {
+                icon: 'adv-wrench',
+                title: 'Используем только оригинальные запчасти',
+                viewbox: '0 0 50 50'
+            },
+            {
+                icon: 'adv-loader',
+                title: 'Обслуживание любой спецтехники',
+                viewbox: '0 0 62 49'
+            },
+            {
+                icon: 'adv-deliver',
+                title: 'Обслуживание любой спецтехники',
+                viewbox: '0 0 60 45'
+            },
+        ];
+
+    section.advantages(class=className)
+        .advantages__container.container
+            .advantages__wrapper.row
+                .advantages__info
+                    h2.advantages__title Обслуживание и ремонт складской техники
+                    p.advantages__description Профессиональные ремонтные работы всех видов спецтехники — один из основных направлений деятельности нашей компании.
+                    +btn({ className: 'btn_theme_secondary btn_size_large advantages__button', text: 'Узнать больше', href: '#' })
+                .advantages__items-wrapper
+                    .advantages__items.row
+                        each val, index in advantages
+                            li.advantages__item
+                                .advantages__item-icon
+                                    +icon({ className: 	'advantages__img',
+                                            svgName: 	val.icon,
+                                            viewBoxName: val.viewbox })
+                                .advantages__item-title= val.title

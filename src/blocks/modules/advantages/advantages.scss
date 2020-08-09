@@ -1,0 +1,89 @@
+.advantages {
+    @include sectionOffset(top);
+    @include sectionOffset(bottom);
+    position: relative;
+    overflow: hidden;
+    color: $gamma;
+    fill: $gamma;
+    background: {
+        image: url(../img/advantages/background.jpg);
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+    };
+
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $alpha;
+        pointer-events: none;
+    }
+    &:after {
+        opacity: .93;
+        mix-blend-mode: color;
+    }
+    &:before {
+        opacity: .9;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 1;
+    }
+    &__wrapper {
+
+    }
+    &__info {
+        @include col();
+        @include size(6);
+    }
+    &__title {
+        @include h1();
+        max-width: 480px;
+        margin-bottom: 40px;
+        line-height: 120%;
+        font-weight: 500;
+    }
+    &__description {
+        @include text-large();
+        max-width: 440px;
+        margin-bottom: 80px;
+    }
+    &__button {
+        @include text-small();
+        min-width: 280px;
+        font-weight: 500;
+        line-height: 150%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__items-wrapper {
+        @include col();
+        @include size(6);
+    }
+    &__items {
+        list-style-type: none;
+        margin-bottom: -120px;
+    }
+    &__item {
+        @include col();
+        @include size(6);
+        margin-bottom: 120px;
+    }
+    &__item-icon {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+    }
+    &__img {
+        height: 56px;
+    }
+    &__item-title {
+        max-width: 216px;
+    }
+}

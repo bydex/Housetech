@@ -1,4 +1,20 @@
 .card {
+    @media (max-width: $break_lg) {
+        padding: {
+            top: 24px;
+            right: 24px;
+            bottom: 24px;
+            left: 24px;
+        }
+    }
+    @media (max-width: $break_md) {
+        padding: {
+            top: 20px;
+            right: 20px;
+            bottom: 20px;
+            left: 20px;
+        }
+    }
     position: relative;
     display: flex;
     flex-direction: column;
@@ -17,14 +33,20 @@
         z-index: 1;
     }
     &__top {
+        @include lg(margin-bottom, 20px);
+        @include xs(margin-bottom, 30px);
         margin-bottom: 24px;
     }
     &__bottom {
         margin-top: auto;
     }
     &__img-wrapper {
+        @include lg(margin-bottom, 25px);
+        @include sm(margin-bottom, 20px);
+        @include xs(margin-bottom, 16px);
         position: relative;
-        min-height: 300px;
+        display: block;
+        padding-bottom: 100%;
         margin-bottom: 40px;
     }
     &__img {
@@ -36,18 +58,42 @@
     }
     &__title {
         @include text-normal();
+        display: block;
+        cursor: pointer;
+        font-weight: 500;
+        transition: {
+            property: color;
+            duration: $duration;
+        }
+
+        &:hover {
+            color: $alpha;
+        }
     }
     &__available {
+        @include lg(margin-bottom, 20px);
+        @include xs(margin-bottom, 16px);
         margin-bottom: 24px;
     }
     &__price-wrapper {
         display: flex;
         align-items: center;
     }
+    &__prices {
+        @include xs(flex-direction, column);
+        @include xs(align-items, flex-start);
+        display: flex;
+        align-items: center;
+    }
     &__price {
+        @include lg(margin-right, 12px);
+        @include xs(margin-bottom, 2px);
         @include text-normal();
         margin-right: 24px;
         font-weight: 500;
+    }
+    &__price:last-child {
+        margin-bottom: 0;
     }
     &__price_stock {
         color: $alpha;

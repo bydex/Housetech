@@ -21,7 +21,6 @@
     box-shadow: none;
     cursor: pointer;
     background: $alpha;
-    border-radius: 29px;
 
     &:after {
         position: absolute;
@@ -43,6 +42,15 @@
     }
 }
 .btn_theme {
+    &_secondary {
+        color: $alpha;
+        background-color: $gamma;
+
+        &:hover, &.active {
+            color: $gamma;
+            background-color: $alpha-hover;
+        }
+    }
     &_primary {
         color: $gamma;
         background-color: $alpha;
@@ -79,13 +87,9 @@
 }
 .btn_size {
     &_standard {
-        min-width: rem(230);
-        padding: rem(9) rem(18);
-        font-size: rem(12);
+        padding: 9px 18px;
     }
     &_large {
-        min-width: rem(250);
-        padding: rem(13) rem(25);
-        font-size: rem(15);
+        padding: 24px;
     }
 }
