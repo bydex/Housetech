@@ -51,6 +51,25 @@
 
 
 
+::-webkit-scrollbar {
+    background-color: #2d2f30;
+    color: $alpha;
+}
+::-webkit-scrollbar-corner {
+    background-color: #252627;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #525658;
+}
+::-webkit-scrollbar-corner {
+    background-color: rgb(42, 43, 44);
+}
+
+::selection {
+    color: $gamma;
+    background: $alpha;
+}
+
 
 
 h1, h2, h3, h4, h5, h6, ul {
@@ -63,6 +82,7 @@ h1, h2, h3, h4, h5, h6, ul {
 }
 
 html {
+    min-width: 320px;
     font-size: 100%;
     scroll-behavior: smooth;
 }
@@ -89,6 +109,12 @@ a {
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+.site-container {
+    @include lg(padding-left, $sidebar-lg);
+    @include md(padding-left, 0);
+    padding-left: $sidebar;
 }
 
 .svg-icon {
@@ -147,7 +173,7 @@ a {
         max-width: 17px;
         max-height: 17px;
         transition: {
-            property: fill;
+            property: fill, stroke;
             duration: $duration;
         }
     }
@@ -165,6 +191,18 @@ a {
         }
     }
 
+    &.circle-icon_stroke {
+        .circle-icon__icon {
+            fill: transparent;
+            stroke: $gamma;;
+        }
+        &:hover {
+            .circle-icon__icon {
+                fill: transparent;
+                stroke: $alpha;;
+            }
+        }
+    }
     .circle-icon__icon {
         fill: $gamma;
     }
@@ -175,5 +213,25 @@ a {
 
     .circle-icon__icon {
         fill: $beta;
+    }
+}
+
+
+.section {
+    @include sectionOffset(top);
+
+    &__title {
+        @include lg(margin-bottom, 40px);
+        @include md(margin-bottom, 30px);
+        @include sm(margin-bottom, 20px);
+        @include h1();
+        margin-bottom: 50px;
+        font-weight: 500;
+    }
+    &__tabs {
+        @include lg(margin-bottom, 40px);
+        @include md(margin-bottom, 30px);
+        @include sm(margin-bottom, 35px);
+        margin-bottom: 50px;
     }
 }

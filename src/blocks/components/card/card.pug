@@ -1,0 +1,23 @@
+include ../available/available
+include ../stickers/stickers
+
+mixin card({ className = false, stock = false, bookmark = true, name, price = false, priceOld, imgName })
+    .card(class=className)
+        if stock === true
+            +stickers({ className: 'card__stickers' })
+        .card__top
+            .card__img-wrapper
+                img.card__img(src=`../img/catalog/${imgName}.jpg` alt="")
+            h3.card__title= name
+        .card__bottom
+            +available({ className: 'card__available', available: true })
+            .card__price-wrapper
+                if price
+                    h4.card__price(class= stock ? 'card__price_stock' : false) #{price} тенге
+                if stock
+                    .card__old-price #{priceOld} тенге
+                button.card__bookmark(class= bookmark ? 'card__bookmark_active' : false)
+                    +icon({
+                        className: 'card__bookmark-icon',
+                        svgName: 'bookmark',
+                    })

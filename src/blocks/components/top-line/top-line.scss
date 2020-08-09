@@ -1,9 +1,10 @@
+.sidebar { display: none; }
 .top-line {
     @media (max-width: $break_md) {
         @include container();
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-right: 0;
+        min-height: 62px;
+        padding-top: 0;
+        padding-bottom: 0;
         padding-left: 0;
         background-color: $gamma;
         border-bottom: 1px solid $beta-lightest;
@@ -12,14 +13,21 @@
         flex-wrap: wrap;
         padding-top: 0;
         padding-bottom: 0;
+        padding-right: 0;
+        padding-left: 0;
         background-color: transparent;
         border-bottom: 1px solid $gamma-light;
     }
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 20;
     width: 100%;
     display: flex;
+    transition: {
+        property: background-color;
+        duration: $duration;
+    }
 
     &__logo {
         @media (max-width: $break_lg) {
@@ -38,9 +46,11 @@
         @media (max-width: $break_sm) {
             @include container();
             width: 100%;
-            padding-top: 16px;
-            padding-bottom: 16px;
+            height: 55px;
+            padding-right: 0;
+            padding-left: 20px;
             background-color: #fff;
+            border: 1px solid $beta-lightest;
         }
         display: flex;
         align-items: center;
@@ -55,6 +65,16 @@
         @include lg(width, 186px);
         @include md(width, 150px);
         width: 230px;
+    }
+    &__logo-inner {
+        @media (max-width: $break_md) {
+            margin-left: 15px;
+        }
+        @media (max-width: $break_sm) {
+            margin-right: auto;
+            margin-left: 0;
+            order: -1;
+        }
     }
     &__container {
         @media (max-width: $break_sm) {
@@ -89,9 +109,6 @@
     }
     &__info {
         @media (max-width: $break_md) {
-            color: $beta;
-        }
-        @media (max-width: $break_sm) {
             display: none;
         }
         @include text-small();
@@ -99,6 +116,10 @@
         flex-grow: 1;
         color: $gamma;
         line-height: 128%;
+        transition: {
+            property: color;
+            duration: $duration;
+        }
     }
     &__phone-wrapper {
         @media (max-width: $break_mdd) {
@@ -136,8 +157,19 @@
     }
     &__subtitle {
         @include text-smaller();
+        transition: {
+            property: color;
+            duration: $duration;
+        }
     }
     &__enter {
+        @media (max-width: $break_md) {
+            margin-right: 0;
+        }
+        @media (max-width: $break_sm) {
+            margin-left: 0;
+            margin-right: auto;
+        }
         @include col();
     }
     &__enter-item {
@@ -146,6 +178,15 @@
         }
         @media (max-width: $break_sm) {
             color: $gamma;
+        }
+
+        &:after {
+            @include md(color, $beta);
+            @include sm(color, $gamma);
+            transition: {
+                property: color;
+                duration: $duration;
+            }
         }
     }
     &__icon-wrapper {
@@ -168,5 +209,61 @@
     }
     &__icon {
 
+    }
+    &__buttons {
+        @include sm(flex-direction, row-reverse);
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    &__button {
+        @media (max-width: $break_md) {
+            display: flex;
+        }
+        @media (max-width: $break_sm) {
+            border-left: 1px solid $beta-lightest;
+            border-right: 0;
+        }
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-bottom: -16px;
+        margin-top: -16px;
+        background-color: transparent;
+        border: none;
+        border-right: 1px solid $beta-lightest;
+        outline: none;
+        cursor: pointer;
+        transition-property: fill;
+        transition-duration: .3s;
+
+        &:hover {
+            fill: $alpha;
+        }
+    }
+    &__button-icon {
+        width: 20px;
+    }
+}
+
+
+.top-line_fixed {
+    background-color: $gamma;
+    box-shadow: 0px 4px 40px rgba(54, 72, 89, 0.06);
+
+    .top-line__info {
+        @include sm(color, $gamma);
+        color: $beta;
+    }
+    .top-line__phone-inner {
+        color: $beta;
+    }
+    .top-line__enter-item,
+    .top-line__enter-item:after {
+        @include sm(color, $gamma);
+        color: $beta;
     }
 }

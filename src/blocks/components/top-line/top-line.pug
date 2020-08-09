@@ -5,7 +5,14 @@ include ../enter/enter
 mixin top-line({className = false})
     .top-line(class=className)
         .top-line__logo
-            a(href="/")
+            .top-line__buttons
+                button.top-line__button(data-toggle-sidebar)
+                    +hamburger({ className: 'header__hamburger' })
+                button.top-line__button
+                    +icon({ className: 	'top-line__button-icon',
+                            svgName: 	'search',
+                            viewBoxName:    '0 0 14 14' })
+            a(class="top-line__logo-inner" href="/")
                 +icon({ className: 	'top-line__logo-img',
                         svgName: 	'logo',
                         viewBoxName:    '0 0 151 20' })
@@ -23,7 +30,7 @@ mixin top-line({className = false})
                     +enter({ className: 'top-line__enter',
                              childClassName: 'top-line__enter-item' })
                     .top-line__icons
-                        a.top-line__icon-wrapper.circle-icon.circle-icon_alpha(href="/bookmarks")
+                        a.top-line__icon-wrapper.circle-icon.circle-icon_alpha.circle-icon_stroke(href="/bookmarks")
                             +icon({ className: 	'top-line__icon circle-icon__icon',
                                     svgName: 	'bookmark' })
                         a.top-line__icon-wrapper.circle-icon.circle-icon_alpha(href="/basket")

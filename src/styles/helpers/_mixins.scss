@@ -94,3 +94,14 @@ $levels: (
       }
   }
 }
+
+
+@mixin sectionOffset($direction) {
+  @media (max-width: $break_lg) {
+    padding-#{$direction}: 80px;
+  }
+  @media (max-width: $break_sm) {
+    padding-#{$direction}: 60px;
+  }
+  padding-#{$direction}: 100px;
+}

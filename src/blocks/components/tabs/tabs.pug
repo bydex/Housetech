@@ -1,0 +1,8 @@
+mixin tabs({ className = false, tabsList = {} })
+    .tabs.swiper-container(class=className)
+        .tabs__list.swiper-wrapper
+            each val, index in tabsList
+                if val.active === true
+                    .swiper-slide.tabs__item.tabs__item_active= val.name
+                else
+                    .swiper-slide.tabs__item= val.name

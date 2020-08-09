@@ -1,0 +1,24 @@
+.available {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+    }
+    &__status {
+        @include text-smaller();
+        margin-left: 12px;
+    }
+
+    &_success {
+        .available__icon {
+            fill: $epsilon;
+        }
+    }
+    &_danger {
+        .available__icon {
+            fill: $alpha;
+        }
+    }
+}

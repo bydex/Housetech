@@ -1,11 +1,11 @@
 $hamburger-padding-x           : 0px !default;
 $hamburger-padding-y           : 0px !default;
 $hamburger-layer-width         : 20px !default;
-$hamburger-layer-height        : 3px !default;
-$hamburger-layer-spacing       : 2px !default;
-$hamburger-layer-color         : $gamma!default;
+$hamburger-layer-height        : 2px !default;
+$hamburger-layer-spacing       : 4px !default;
+$hamburger-layer-color         : $beta!default;
 $hamburger-layer-border-radius : 6px !default;
-$hamburger-hover-opacity       : 0.7 !default;
+$hamburger-hover-opacity       : 1 !default;
 $hamburger-active-layer-color  : $hamburger-layer-color !default;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
 
@@ -26,7 +26,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
     cursor: pointer;
 
     transition-property: opacity, filter;
-    transition-duration: 0.15s;
+    transition-duration: $duration;
     transition-timing-function: linear;
 
     // Normalize (<button>)
@@ -38,7 +38,6 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
     margin: 0;
     overflow: visible;
     line-height: 0;
-    margin-right: 18px;
 
     &:hover {
       @if $hamburger-hover-use-filter == true {
@@ -78,7 +77,7 @@ $hamburger-active-hover-filter: $hamburger-hover-filter !default;
   .hamburger-inner {
     display: block;
     top: 50%;
-    margin-top: -3px;
+    margin-top: 0;
 
     &,
     &::before,

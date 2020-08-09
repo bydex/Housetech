@@ -1,0 +1,8 @@
+mixin available({ className = false, available = true })
+    .available(class=className class= available ? 'available_success' : 'available_danger')
+        .available__icon-wrapper
+            +icon({
+                className: 'available__icon',
+                svgName: available ? 'check' : 'nocheck',
+            })
+        .available__status= available ? 'В наличии' : 'Нет в наличии'

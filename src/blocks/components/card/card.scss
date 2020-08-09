@@ -1,0 +1,86 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: {
+        top: 32px;
+        right: 32px;
+        bottom: 32px;
+        left: 32px;
+    }
+    border: 1px solid $beta-lightest;
+
+    &__stickers {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 1;
+    }
+    &__top {
+        margin-bottom: 24px;
+    }
+    &__bottom {
+        margin-top: auto;
+    }
+    &__img-wrapper {
+        position: relative;
+        min-height: 300px;
+        margin-bottom: 40px;
+    }
+    &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__title {
+        @include text-normal();
+    }
+    &__available {
+        margin-bottom: 24px;
+    }
+    &__price-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__price {
+        @include text-normal();
+        margin-right: 24px;
+        font-weight: 500;
+    }
+    &__price_stock {
+        color: $alpha;
+    }
+    &__old-price {
+        @include text-smallest();
+        color: $beta-light;
+        text-decoration-line: line-through;
+    }
+    &__bookmark {
+        padding: 0;
+        margin: 0;
+        margin-left: auto;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        fill: none;
+        stroke: $beta-light;
+        transition: {
+            property: fill, stroke;
+            duration: $duration;
+        }
+    }
+    &__bookmark_active {
+        fill: $alpha;
+        stroke: $alpha;
+    }
+    &__bookmark:hover {
+        stroke: $alpha;
+    }
+    &__bookmark-icon {
+        max-width: 24px;
+        max-height: 24px;
+    }
+}
