@@ -1,7 +1,17 @@
 include ../../components/btn/btn
 include ../../components/top-line/top-line
 include ../../modules/sidebar/sidebar
+include ../../components/main-slider/main-slider
 
 mixin header({className = false})
+    -
+        const
+            sliderTitle = ['Надежный поставщик складской техники', 'Надежный поставщик складской техники', 'Надежный поставщик складской техники',]
+            sliderText = ['На складе компании насчитывается более 3 000 наименований запчастей и расходных материаловдля всех видов и моделей складской техники.']
     header.header(class=className)
         +top-line({className: 'header__top-line' })
+        +main-slider({
+            parentClass: 'header__main-slider',
+            title: sliderTitle,
+            text: sliderText,
+        })

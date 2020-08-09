@@ -1,0 +1,29 @@
+mixin main-slider({parentClass = false, title, text, btnText = 'Узнать больше'})
+    section.main-slider(class=parentClass)
+        .container
+            .row
+                .main-slider__container.swiper-container
+                    .main-slider__wrapper.swiper-wrapper
+                        - for (let i = 0; i < title.length; i += 1) {
+                            .main-slider__slide.swiper-slide
+                                .main-slider__content
+                                    .main-slider__title.h2-heading #{title[i]}
+                                    .main-slider__text #{text}
+                                    //- .main-slider__text #{text[i]}
+                                    a.main-slider__link.btn.btn_theme_transparent(href="#") #{btnText}
+                        - }
+                    .main-slider__pagination.swiper-pagination
+                    .main-slider__arrow-prev.swiper-button-prev
+                        +icon({
+                            svgName: 'arrow-long',
+                            className: 'svg-icon',
+                        })
+                    .main-slider__arrow-next.swiper-button-next
+                        +icon({
+                            svgName: 'arrow-long',
+                            className: 'svg-icon',
+                        })
+        .main-slider__buttons-bg
+
+                        
+                        

@@ -1,0 +1,33 @@
+.main-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    &__content {
+        @include col();
+        @include size(6);
+    }
+    &__title {
+        margin-bottom: 30px;
+        font-weight: 600;
+        color: $gamma;    
+        line-height: 150%;
+        text-transform: uppercase;
+    }
+    &__text {
+        @include text-large();
+        color: $gamma;
+        @include shift-padding-right(4);
+        margin-bottom: 30px;
+    }
+    &__buttons-bg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 438px;
+        height: 100px;
+        background-color: $alpha;
+    }
+    &__arrow-next:after, &__arrow-prev:after {
+        content: '' !important;
+    }
+}

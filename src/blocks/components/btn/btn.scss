@@ -21,7 +21,6 @@
     box-shadow: none;
     cursor: pointer;
     background: $alpha;
-    border-radius: 29px;
 
     &:after {
         position: absolute;
@@ -63,17 +62,12 @@
     }
     &_transparent {
         background: transparent;
-        color: $alpha;
-        padding: {
-            top: 16px;
-            right: 62px;
-            bottom: 13px;
-            left: 62px;
-        };
+        color: $gamma;
+        padding: 0;
         border: {
-            width: 4px;
-            style: solid;
-            color: $alpha;
+            bottom-width: 2;
+            bottom-style: solid;
+            bottom-color: $gamma;
         }
     }
 }
