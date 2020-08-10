@@ -1,0 +1,25 @@
+.arrow-link {
+    transition: {
+        property: color, fill;
+        duration: $duration;
+    }
+    &:hover {
+        color: $alpha;
+        fill: $alpha;
+    }
+
+    &__inner {
+        display: inline-flex;
+        align-items: center;
+    }
+    &__text {
+        @include text-small();
+        margin-right: 25px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    &__icon {
+        height: 16px;
+        max-width: 25px;
+    }
+}

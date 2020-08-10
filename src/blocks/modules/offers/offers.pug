@@ -1,0 +1,24 @@
+include ../../components/arrow-link/arrow-link
+
+mixin offers({ className = false })
+    section.offers.section
+        .offers__subsection.subsection.container
+            h2.offers__header-title Специальные предложения
+            +arrow-link({ className: 'offers__header-link', text: 'все акции' })
+        .offers__wrapper
+            .offers__item.offers__item_beta(style="background-image: url(./img/offers/worker.jpg)")
+                span.offers__item-pseudo
+                .offers__info
+                    h3.offers__title Подарок за первую покупку
+                    p.offers__description Оставьте нам отзыв и мы подаримвам скидку до 23% или подарок
+                    +arrow-link({ className: 'offers__link', text: 'Узнать больше' })
+                .offers__img
+                    img(src="./offers/iphone.png")
+            .offers__item.offers__item_alpha
+                span.offers__item-pseudo
+                .offers__info
+                    h3.offers__title Подарок за первую покупку
+                    p.offers__description Дарим наушники или телефон новым покупателям
+                    +arrow-link({ className: 'offers__link', text: 'Узнать больше' })
+                .offers__img
+                    img(src="./offers/iphone.png")

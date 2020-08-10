@@ -1,0 +1,7 @@
+mixin arrow-link({ className = false, text, hrefName = "#" })
+    .arrow-link(class=className)
+        a.arrow-link__inner(href=hrefName)
+            span.arrow-link__text= text
+            +icon({ className: 	'arrow-link__icon',
+                    svgName: 	'arrow-short',
+                    viewBoxName:    '0 0 20 16' })

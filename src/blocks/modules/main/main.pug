@@ -1,10 +1,13 @@
 include ../popular-products/popular-products
 include ../advantages/advantages
 include ../logos/logos
+include ../offers/offers
 
 mixin main()
     main.main
         +popular-products({})
         +advantages({ type: 'advantages' })
+        +logos({ type: 'kazakh' })
         +advantages({ type: 'numbers' })
-        +logos({ })
+        +logos({ type: 'inter' })
+        +offers({ })

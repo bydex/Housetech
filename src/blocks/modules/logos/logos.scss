@@ -1,4 +1,6 @@
 .logos {
+    @include lg(padding-top, 0);
+    padding-top: 0;
     &__subsection {
 
     }
