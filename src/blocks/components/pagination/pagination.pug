@@ -1,0 +1,10 @@
+mixin pagination({ className = false, pages = 5 })
+    .pagination(class=className)
+        ul.pagination__list
+            li.pagination__item.pagination__item_prev
+                a.pagination__link(href="#")  пред
+            - for (let i = 1; i <= pages; ++i)
+                li.pagination__item(class=(i==1) ? 'pagination__item_active' : false)
+                    a.pagination__link(href="#")= i
+            li.pagination__item.pagination__item_next
+                a.pagination__link(href="#") след

@@ -234,4 +234,14 @@ a {
         @include sm(margin-bottom, 35px);
         margin-bottom: 50px;
     }
+
+    &__products {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__product {
+        @include md(width, 33.3333%);
+        @include sm(width, 50%);
+        width: 25%;
+    }
 }

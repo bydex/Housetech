@@ -1,0 +1,92 @@
+include ../../components/btn/btn
+
+mixin advantages({ className = false, type })
+    -
+        const advantages = [
+            {
+                icon: 'adv-calendar',
+                title: 'Предоставляем круглогодичный сервис',
+                viewbox: '0 0 50 50'
+            },
+            {
+                icon: 'adv-wrench',
+                title: 'Используем только оригинальные запчасти',
+                viewbox: '0 0 50 50'
+            },
+            {
+                icon: 'adv-loader',
+                title: 'Обслуживание любой спецтехники',
+                viewbox: '0 0 62 49'
+            },
+            {
+                icon: 'adv-deliver',
+                title: 'Обслуживание любой спецтехники',
+                viewbox: '0 0 60 45'
+            },
+        ];
+    -
+        const numbers = [
+            {
+                title: '3000 +',
+                desc: 'Наименований запчастей и расходных материалов насчитывается на складе нашей компании'
+            },
+            {
+                title: '500 +',
+                desc: 'Компаний разных уровнейи сегментов стали нашими постоянными клиентами'
+            },
+            {
+                title: '300 +',
+                desc: 'Самых крупных компаний на территории РК доверяют свою технику нашему сервис-центру'
+            },
+            {
+                title: '2014',
+                desc: 'С 2014 года беспечиваем клиентов качественной техникой, которая решит складские задачи на 100%'
+            },
+        ]
+    -
+        const info = {
+            advantages: {
+                title: 'Обслуживание и ремонт складской техники',
+                description: 'Профессиональные ремонтные работы всех видов спецтехники — один из основных направлений деятельности нашей компании.',
+            },
+            numbers: {
+                title: 'Лучшая компания в своем сегменте',
+                description: 'Мы являемся многопрофильной компанией, которая может обеспечить любое производство и склад всем необходимым оборудованием и складской техникой.'
+            },
+            result: function() {
+                let result;
+                if (type === 'advantages') result = this.advantages;
+                else if (type === 'numbers') result = this.numbers
+                return result;
+            },
+            buttonTheme: function() {
+                let result;
+                if (type === 'advantages') result = 'btn_theme_gamma';
+                else if (type === 'numbers') result = 'btn_theme_transparent-gamma';
+                return result;
+            }
+        };
+
+    section.advantages(class=className class=(type === 'advantages') ? 'advantages_alpha' : 'advantages_gamma')
+        .advantages__container.container
+            .advantages__wrapper.row
+                .advantages__info
+                    h2.advantages__title= info.result().title
+                    p.advantages__description= info.result().description
+                    +btn({ className: `${info.buttonTheme()} btn_size_large advantages__button`, text: 'Узнать больше', href: '#' })
+                .advantages__items-wrapper
+                    ul.advantages__items.row
+                        if (type === 'advantages')
+                            each val, index in advantages
+                                li.advantages__item
+                                    .advantages__item-icon
+                                        +icon({ className: 	 'advantages__img',
+                                                svgName: 	 val.icon,
+                                                viewBoxName: val.viewbox })
+                                    .advantages__item-title= val.title
+                        else if (type === 'numbers')
+                            each val, index in numbers
+                                li.advantages__number
+                                    .advantages__number-title= val.title
+                                    .advantages__number-description= val.desc
+                    +btn({ className: `${info.buttonTheme()} btn_size_large advantages__button advantages__button_mobile`, text: 'Узнать больше', href: '#' })

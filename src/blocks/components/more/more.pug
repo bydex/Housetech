@@ -1,0 +1,28 @@
+include ../pagination/pagination
+
+mixin more({ className = false, showed = true, pagination = false })
+    - let hasBlocks;
+    if showed === true && pagination === false
+        - hasBlocks = 'more__show-more_offset'
+    else if pagination === true && showed === false
+        - hasBlocks = 'more__show-more_offset'
+    else if (showed === false && pagination === false)
+        - hasBlocks = 'more__show-more_offset-2'
+    else if (showed === true && pagination === true)
+        - hasBlocks = false
+
+
+    .more.container
+        .row.more__inner
+            if showed
+                .more__showed Товары 1-8 из 4
+            if pagination
+                +pagination({ className: 'more__pagination' })
+
+            .more__show-more(class=hasBlocks)
+                button.more__show-link
+                    +icon({
+                        className: 'more__show-icon',
+                        svgName: 'update',
+                    })
+                    | Показать еще

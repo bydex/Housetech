@@ -1,15 +1,20 @@
 include ../../components/tabs/tabs
 include ../../components/card/card
+include ../../components/more/more
 
 mixin popular-products()
     section.section
         .container
             h2.section__title Популярные товары
             +tabs({ className: 'section__tabs', tabsList: categories.popularProducts })
-        +card({ className: 'section__item',
-                stock: true,
-                bookmark: false,
-                name: 'Тележка гидравлическая MLS-2500',
-                price: '19 990',
-                priceOld: '90 990',
-                imgName: 'card-1' })
+        .section__products
+            each val, index in products
+                +card({ className: 'section__product',
+                        stock:      val.stock,
+                        bookmark:   val.bookmark,
+                        name:       val.name,
+                        price:      val.price,
+                        priceOld:   val.priceOld,
+                        imgName:    val.imgName,
+                        available:  val.available })
+        +more({ className: 'section__more', showed: false, pagination: false })

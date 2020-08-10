@@ -1,5 +1,8 @@
 include ../popular-products/popular-products
+include ../advantages/advantages
 
 mixin main()
     main.main
         +popular-products({})
+        +advantages({ type: 'advantages' })
+        +advantages({ type: 'numbers' })

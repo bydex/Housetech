@@ -10,39 +10,23 @@
         family: inherit;
         size: rem($text-big);
     }
-    padding: {
-        top: 20px;
-        right: 82px;
-        bottom: 17px;
-        left: 80px;
-    };
     background: none;
     outline: none;
     box-shadow: none;
+    user-select: none;
     cursor: pointer;
-    background: $alpha;
-
-    &:after {
-        position: absolute;
-        z-index: -1;
-        left: 18px;
-        top: 100%;
-        transform: translate(0, -125%) rotate(45deg);
-        background-color: inherit;
-        pointer-events: none;
-        transition: {
-            property: transform;
-            duration: $duration;
-        };
-    }
-    &:hover {
-        &::after {
-            transform: translate(0, -50%) rotate(45deg);
-        }
-    }
 }
 .btn_theme {
-    &_primary {
+    &_gamma {
+        color: $alpha;
+        background-color: $gamma;
+
+        &:hover, &.active {
+            color: $gamma;
+            background-color: $alpha-hover;
+        }
+    }
+    &_alpha {
         color: $gamma;
         background-color: $alpha;
 
@@ -51,35 +35,36 @@
             background-color: $alpha;
         }
     }
-    &_blue {
+    &_transparent-alpha {
+        background: transparent;
         color: $alpha;
-        background-color: $alpha;
-
-        &:hover, &.active {
-            color: $gamma;
-            background-color: $alpha;
+        border: {
+            width: 1px;
+            style: solid;
+            color: $alpha;
         }
     }
-    &_transparent {
+    &_transparent-gamma {
         background: transparent;
-        color: $gamma;
-        padding: 0;
+        color: $beta;
         border: {
-            bottom-width: 2;
-            bottom-style: solid;
-            bottom-color: $gamma;
+            width: 1px;
+            style: solid;
+            color: $beta-lighter;
+        }
+
+        &:hover {
+            color: $gamma;
+            background-color: $alpha;
+            border-color: $alpha;
         }
     }
 }
 .btn_size {
     &_standard {
-        min-width: rem(230);
-        padding: rem(9) rem(18);
-        font-size: rem(12);
+        padding: 9px 18px;
     }
     &_large {
-        min-width: rem(250);
-        padding: rem(13) rem(25);
-        font-size: rem(15);
+        padding: 24px;
     }
 }

@@ -1,0 +1,161 @@
+.advantages {
+    @include sectionOffset(top);
+    @include sectionOffset(bottom);
+    position: relative;
+    overflow: hidden;
+
+    &_alpha {
+        color: $gamma;
+        fill: $gamma;
+        background: {
+            image: url(../img/advantages/background.jpg);
+            position: center;
+            size: cover;
+            repeat: no-repeat;
+        };
+        &:after,
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $alpha;
+            pointer-events: none;
+        }
+        &:after {
+            opacity: .93;
+            mix-blend-mode: color;
+        }
+        &:before {
+            opacity: .9;
+        }
+    }
+
+    &_gamma {
+        border-bottom: 1px solid $gamma-lightest1;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 1;
+    }
+    &__wrapper {
+
+    }
+    &__info {
+        @include sm(margin-bottom, 40px);
+        @include col();
+        @include size(6);
+        @include size-xs(12);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    &__title {
+        @include lg(margin-bottom, 30px);
+        @include lg(max-width, 360px);
+        @include md(max-width, 300px);
+        @include h1();
+        max-width: 480px;
+        margin-bottom: 40px;
+        line-height: 120%;
+        font-weight: 500;
+    }
+    &__description {
+        @include lg(max-width, 320px);
+        @include md(max-width, 320px);
+        @include text-large();
+        max-width: 440px;
+        margin-bottom: 32px;
+    }
+    &__button {
+        @include lg(min-width, 220px);
+        @include xs(min-width, 260px);
+        @include xs(display, none);
+        @include text-small();
+        min-width: 280px;
+        margin-top: auto;
+        font-weight: 500;
+        line-height: 150%;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__button_mobile {
+        @include xs(display, inline-block);
+        display: none;
+    }
+    &__items-wrapper {
+        @include col();
+        @include size(6);
+        @include size-xs(12);
+    }
+    &__items {
+        @include sm(padding-bottom, 40px);
+        list-style-type: none;
+
+    }
+    &__item {
+        @media (max-width: $break_sm) {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        @include lg(margin-bottom, 80px);
+        @include col();
+        @include size(6);
+        @include size-sm(12);
+        margin-bottom: 120px;
+
+
+        &:nth-last-of-type(-n + 2) {
+            @include sm(margin-bottom, 25px);
+            margin-bottom: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__item-icon {
+        @media (max-width: $break_sm) {
+            margin-bottom: 0;
+            margin-right: 40px;
+        }
+        @include lg(margin-bottom, 30px);
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 40px;
+    }
+    &__img {
+        @include lg(height, 40px);
+        height: 56px;
+    }
+    &__item-title {
+        max-width: 216px;
+    }
+
+    &__number {
+        @include lg(margin-bottom, 80px);
+        @include md(margin-bottom, 60px);
+        @include sm(margin-bottom, 20px);
+        @include col();
+        @include size(6);
+        margin-bottom: 100px;
+
+        &:nth-last-of-type(-n + 2) {
+            margin-bottom: 0;
+        }
+    }
+    &__number-title {
+        @include text-largest();
+        margin-bottom: 16px;
+        color: $alpha;
+        line-height: 120%;
+        font-weight: 500;
+    }
+    &__number-description {
+        @include text-small();
+        max-width: 220px;
+    }
+}

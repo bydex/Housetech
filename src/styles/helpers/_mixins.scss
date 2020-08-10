@@ -1,12 +1,8 @@
 $container: 1416px;
 $container-lg: 991px;
-$container-md: 720px;
-$container-sm: 540px;
 
 .container {
   @include container();
-  @include sm(max-width, $container-sm);
-  @include md(max-width, $container-md);
   @include lg(max-width, $container-lg);
   max-width: $container;
 }
