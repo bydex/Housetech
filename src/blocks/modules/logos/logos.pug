@@ -1,0 +1,25 @@
+include ../../components/arrows/arrows
+
+mixin logos({ className = false })
+    section.section.logos.swiper-container(class=className)
+        .logos__subsection.subsection.container
+            .logos__inner.row
+                .logos__title Эффективность сотрудничества с "СкладТех" по достоинству оценили многие казахстанские и зарубежные компании.
+                .logos__arrows
+                    +arrows({})
+        .logos__items.swiper-wrapper
+            .logos__item.swiper-slide
+                .logos__img-wrapper
+                    img(class="logos__img" src="./img/logo-companies/logo-1.png")
+            .logos__item.swiper-slide
+                .logos__img-wrapper
+                    img(class="logos__img" src="./img/logo-companies/logo-2.png")
+            .logos__item.swiper-slide
+                .logos__img-wrapper
+                    img(class="logos__img" src="./img/logo-companies/logo-3.png")
+            .logos__item.swiper-slide
+                .logos__img-wrapper
+                    img(class="logos__img" src="./img/logo-companies/logo-4.png")
+            .logos__item.swiper-slide
+                .logos__img-wrapper
+                    img(class="logos__img" src="./img/logo-companies/logo-5.png")

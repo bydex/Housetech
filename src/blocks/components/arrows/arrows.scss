@@ -1,0 +1,27 @@
+.arrows {
+    display: flex;
+    align-items: center;
+    &__arrow {
+        display: flex;
+        cursor: pointer;
+        fill: $beta-lightest;
+        transition: {
+            property: fill;
+            duration: $duration;
+        }
+    }
+    &__arrow:hover {
+        fill: $alpha;
+    }
+    &__arrow_left {
+        transform: rotate(180deg);
+    }
+    &__arrow_right {
+        fill: $beta;
+        margin-left: 35px;
+    }
+    &__icon {
+        width: 26px;
+        max-height: 16px;
+    }
+}
