@@ -15,45 +15,46 @@ mixin sidebar()
             stackTech = ['Гидравлические тележки', 'Подъёмные столы', 'Полуэлектрические штабелеры', 'Гидравлические штабелеры', 'Складские тележки', 'Электрические штабелеры']
             extraItems = ['Акции', 'Доставка и оплата', 'Контакты']
     section.sidebar
-        .sidebar__content.sidebar__content_offset_left-0
-            +search({
-                text: 'Поиск по сайту',
-                icon: 'search',
-            })
-        .sidebar__content.sidebar__content_offset_big
-            +dropdown-menu({
-                parentClass: 'sidebar__dropdown-menu',
-                items: stackTech,
-                dropdownTitle: 'СКЛАДСКАЯ ТЕХНИКА',
-            })
-            +dropdown-menu({
-                parentClass: 'sidebar__dropdown-menu',
-                items: stackTech,
-                dropdownTitle: 'ВИЛОЧНЫЕ ПОГРУЗЧИКИ',
-            })
-            +dropdown-menu({
-                parentClass: 'sidebar__dropdown-menu',
-                items: stackTech,
-                dropdownTitle: 'ПЛАСТИКОВАЯ ТАРА',
-            })
-            +dropdown-menu({
-                parentClass: 'sidebar__dropdown-menu',
-                items: stackTech,
-                dropdownTitle: 'ШИНЫ ДЛЯ СПЕЦ.ТЕХНИКИ',
-            })
-            +dropdown-menu({
-                parentClass: 'sidebar__dropdown-menu',
-                items: stackTech,
-                dropdownTitle: 'Запчасти',
-            })
-        .sidebar__content.sidebar__content_offset_small
-            +sidebar__item({
-                paragraphText: 'Сервис',
-                iconName: 'wrench',
-            })
-        .sidebar__content.sidebar__content_offset_big
-            +extra({
-                parentClass: 'sidebar__extra',
-                linkClass: 'dropdown-menu__title',
-                items: extraItems,
-            })
+        .sidebar__inner
+            .sidebar__content.sidebar__content_offset_left-0
+                +search({
+                    text: 'Поиск по сайту',
+                    icon: 'search',
+                })
+            .sidebar__content.sidebar__content_offset_big
+                +dropdown-menu({
+                    parentClass: 'sidebar__dropdown-menu',
+                    items: stackTech,
+                    dropdownTitle: 'СКЛАДСКАЯ ТЕХНИКА',
+                })
+                +dropdown-menu({
+                    parentClass: 'sidebar__dropdown-menu',
+                    items: stackTech,
+                    dropdownTitle: 'ВИЛОЧНЫЕ ПОГРУЗЧИКИ',
+                })
+                +dropdown-menu({
+                    parentClass: 'sidebar__dropdown-menu',
+                    items: stackTech,
+                    dropdownTitle: 'ПЛАСТИКОВАЯ ТАРА',
+                })
+                +dropdown-menu({
+                    parentClass: 'sidebar__dropdown-menu',
+                    items: stackTech,
+                    dropdownTitle: 'ШИНЫ ДЛЯ СПЕЦ.ТЕХНИКИ',
+                })
+                +dropdown-menu({
+                    parentClass: 'sidebar__dropdown-menu',
+                    items: stackTech,
+                    dropdownTitle: 'Запчасти',
+                })
+            .sidebar__content.sidebar__content_offset_small
+                +sidebar__item({
+                    paragraphText: 'Сервис',
+                    iconName: 'wrench',
+                })
+            .sidebar__content.sidebar__content_offset_big
+                +extra({
+                    parentClass: 'sidebar__extra',
+                    linkClass: 'dropdown-menu__title',
+                    items: extraItems,
+                })

@@ -220,6 +220,14 @@ a {
 .section {
     @include sectionOffset(top);
 
+    &_subsection {
+        @include lg(padding-top, 0);
+        @include md(padding-top, 0);
+        @include sm(padding-top, 0);
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
     &__title {
         @include lg(margin-bottom, 40px);
         @include md(margin-bottom, 30px);

@@ -251,8 +251,15 @@
 
 .top-line_fixed {
     background-color: $gamma;
-    box-shadow: 0px 4px 40px rgba(54, 72, 89, 0.06);
 
+    .top-line__container {
+        border-color: $beta-lightest;
+        box-shadow: 0px 4px 40px rgba(54, 72, 89, 0.06);
+    }
+    .top-line__logo {
+        position: relative;
+        z-index: 1;
+    }
     .top-line__info {
         @include sm(color, $gamma);
         color: $beta;

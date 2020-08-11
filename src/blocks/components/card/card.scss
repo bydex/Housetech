@@ -24,7 +24,9 @@
         bottom: 32px;
         left: 32px;
     }
+    margin-top: -1px;
     border: 1px solid $beta-lightest;
+    border-left: 0;
 
     &__stickers {
         position: absolute;

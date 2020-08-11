@@ -25,6 +25,11 @@
     min-width: $sidebar;
     padding-top: 91px;
     background-color: $gamma;
+
+    &__inner {
+        height: 100%;
+        border-right: 1px solid $beta-lightest;
+    }
     &__content {
         padding-left: 40px;
         &_offset {
@@ -42,7 +47,7 @@
                     padding-bottom: 15px;
                 }
                 padding-top: 20px;
-                padding-bottom: 20px;       
+                padding-bottom: 20px;
             }
             &_left-0 {
                 padding-left: 0;
@@ -50,7 +55,7 @@
         }
     }
     &__content:not(:last-of-type) {
-        @include border($border-width, rgba($border-color, $opacity0_1), bottom);
+        @include border(1px, rgba($border-color, $opacity0_1), bottom);
     }
     &__dropdown-menu  + &__dropdown-menu {
         margin-top: 28px

@@ -17,6 +17,30 @@
         flex-wrap: wrap;
     }
     &__item {
+        @media (max-width: $break_lg) {
+            padding: {
+                top: 90px;
+                right: 50px;
+                bottom: 90px;
+                left: 50px;
+            }
+        }
+        @media (max-width: $break_md) {
+            padding: {
+                top: 55px;
+                right: 40px;
+                bottom: 55px;
+                left: 40px;
+            }
+        }
+        @media (max-width: $break_sm) {
+            padding: {
+                top: 50px;
+                right: 20px;
+                bottom: 50px;
+                left: 20px;
+            }
+        }
         position: relative;
         width: 50%;
         padding: {
@@ -36,7 +60,8 @@
     &__item_beta:before,
     &__item_alpha:after,
     &__item_alpha:before,
-    &__item_beta .offers__item-pseudo {
+    &__item_beta .offers__item-pseudo,
+    &__item-bg {
         content: '';
         position: absolute;
         top: 0;
@@ -76,21 +101,50 @@
     }
     &__item_alpha {
     }
+    &__item-bg {
+        z-index: 0;
+        background: {
+            position: center;
+            repeat: no-repeat;
+            size: cover;
+        };
+        opacity: $opacity0_5;
+    }
     &__info {
+        @include col();
+        @include size(7);
         position: relative;
         z-index: 2;
+        max-width: 360px;
     }
     &__title {
-
+        @include text-bigger();
+        margin-bottom: 20px;
+        font-weight: 500;
     }
     &__description {
-
+        @include text-large();
+        margin-bottom: 40px;
     }
     &__link {
-
+        fill: $gamma;
+        color: inherit;
+    }
+    &__img-wrapper {
+        @include md(margin-right, 0);
+        @include md(width, 50%);
+        @include col();
+        @include size(6);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+    }
+    &__img-wrapper_center {
+        bottom: 50%;
+        transform: translateY(50%);
     }
     &__img {
-        position: relative;
-        z-index: 2;
+        display: block;
     }
 }
