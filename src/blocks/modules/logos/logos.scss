@@ -23,6 +23,15 @@
         @include text-small();
     }
     &__item {
+        @media (max-width: $break_lg) {
+            height: 146px;
+        }
+        @media (max-width: $break_md) {
+            height: 96px;
+        }
+        @media (max-width: $break_sm) {
+            height: 85px;
+        }
         position: relative;
         display: flex;
         justify-content: center;

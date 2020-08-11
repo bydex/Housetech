@@ -1,4 +1,4 @@
-import Swiper from 'swiper';
+import Swiper from 'swiper/swiper-bundle';
 
 const tabs = document.querySelectorAll('.tabs');
 

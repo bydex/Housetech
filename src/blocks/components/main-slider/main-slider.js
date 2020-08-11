@@ -1,4 +1,4 @@
-import Swiper from '../../../../node_modules/swiper/swiper-bundle';
+import Swiper from 'swiper/swiper-bundle';
 
 if (document.querySelector('.main-slider')) {
     const mainSliderContainer = document.querySelector('.main-slider__container');

@@ -1,13 +1,9 @@
-modules.define('card', ['i-bem-dom'], function(provide, bemDom) {
+const card = document.querySelectorAll('.card');
 
-provide(bemDom.declBlock(this.name, {
-    onSetMod: {
-        js: {
-            inited: function() {
-                
-            }
-        }
-    }
-}));
+card.forEach((el) => {
+    const bookmark = el.querySelector('.card__bookmark');
 
-});
+    bookmark.addEventListener('click', function() {
+        this.classList.add('card__bookmark_active');
+    })
+})
